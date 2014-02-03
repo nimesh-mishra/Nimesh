@@ -20,11 +20,21 @@ public class SavingsAccount {
 	}
 	
 	/**
+	 * This static method is used to set the annualInterestRate
+	 * @author nimesh
+	 * @param interestRate {@link Float} The annual Intrest rate.
+	 */
+	public static void modifyInterestRate(float interestRate){
+		annualIntrestRate=interestRate/100; // to change the % to actual value..
+	}
+	
+	/**
 	 * This method calculates the monthly intrest on savings.
 	 * @author nimesh
 	 */
 	public void calculateMonthlyInterest(){
 		monthlyIntrest=savingsBalance*annualIntrestRate/12;
+		System.out.println("The monthly intrest is: $"+monthlyIntrest);
 	}
 	
 	/**
@@ -35,14 +45,6 @@ public class SavingsAccount {
 		savingsBalance+=monthlyIntrest;
 	}
 	
-	/**
-	 * This static method is used to set the annualInterestRate
-	 * @author nimesh
-	 * @param interestRate {@link Float} The annual Intrest rate.
-	 */
-	public static void modifyInterestRate(float interestRate){
-		annualIntrestRate=interestRate/100;
-	}
 	
 	/**
 	 * This method displays the total savingsBalance
