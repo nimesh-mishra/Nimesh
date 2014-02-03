@@ -37,7 +37,7 @@ public class SavingsAccount {
 	 *            {@link Float} The saving amount
 	 */
 	public SavingsAccount(float balance) {
-		savingsBalance = balance;
+		this.savingsBalance = balance;
 	}
 
 	/**

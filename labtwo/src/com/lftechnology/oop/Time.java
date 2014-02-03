@@ -65,28 +65,18 @@ public class Time {
 	 *            {@link Time} The time to be added to current time.
 	 */
 	private void addTime(Time time) {
-		int addhour = 0;
-		int addmin = 0;
-		int addsec = 0;
+		int addHour = 0;
+		int addMin = 0;
+		int addSec = 0;
 		display();
 		System.out.println("The Time to be added is \t" + time.hours + ":"
 				+ time.minutes + ":" + time.seconds);
-		addhour = this.hours + time.hours;
-		addmin = this.minutes + time.minutes;
-		addsec = this.seconds + time.seconds;
-		if (addsec >= 60) {
-			addmin = addsec / 60;
-			addsec = addsec % 60;
-		}
-		if (addmin >= 60) {
-			addhour = addmin / 60;
-			addmin = addmin % 60;
-		}
-		if (addhour >= 24) {
-			addhour = addhour % 24;
-		}
-		System.out.println("The total time is \t " + addhour + ":" + addmin
-				+ ":" + addsec);
+		addHour = this.hours + time.hours;
+		addMin = this.minutes + time.minutes;
+		addSec = this.seconds + time.seconds;
+		Time newTime=new Time(addHour,addMin,addSec);
+		System.out.println("The total time is \t " + newTime.hours + ":" + newTime.minutes
+				+ ":" + newTime.seconds);
 
 	}
 
