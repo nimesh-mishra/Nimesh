@@ -3,6 +3,12 @@ package com.lftechnology.oop;
 import java.util.Scanner;
 
 /**
+ * 3. Write a program that calculates percentage and GPA of 5 students. 
+ * 		Each of the students has following attributes: 
+ * 		name, class, rollnum, and marks obtained in 5 subjects.
+ */
+
+/**
  * This class calculates the percentage and GPA of a student.
  * 
  * @author nimesh
@@ -53,6 +59,7 @@ public class CalculatePercentageAndGPA {
 
 	/**
 	 * This function calculates the percentage of each student
+	 * 
 	 * @author nimesh
 	 */
 	public void calculatePercentage() {

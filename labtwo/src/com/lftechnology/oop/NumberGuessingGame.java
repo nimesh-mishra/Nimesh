@@ -5,6 +5,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
+ * 1. Write a Guessing a number game application:
+ *  User will select the guessing value from the keyboard
+ *   and application will generate a random no between 1 and 100. 
+ *   Check if the guess value matched with random no. or not,
+ *    if matched show the guessing value, random value and the no. of attempts.
+ */
+
+/**
  * This class is a number guessing game. The user will provide a number between
  * [1-100] The system will generate a random number in the same range. If the
  * numbers match, the number, retry count and the random number..
@@ -32,9 +40,9 @@ public class NumberGuessingGame {
 	private void prompt() {
 		Scanner scan = new Scanner(System.in);
 		System.out
-				.println("==============================================================");
+		.println("==============================================================");
 		System.out
-				.println("Please enter the number in the range [1-100] or 0 to exit");
+		.println("Please enter the number in the range [1-100] or 0 to exit");
 		try {
 			number = scan.nextInt();
 		} catch (InputMismatchException i) {
@@ -87,7 +95,7 @@ public class NumberGuessingGame {
 
 		} else {
 			System.out
-					.println("Sorry the number you guessed is not correct . Please try again.");
+			.println("Sorry the number you guessed is not correct . Please try again.");
 		}
 		prompt();
 	}
