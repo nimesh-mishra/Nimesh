@@ -10,8 +10,8 @@ package com.lftechnology.oop;
  */
 
 /**
- * This class has two variables(distances) and functions that adds those
- * variables,compare them and displays them
+ * This class has two variables(distances) and functions that 
+ * adds,compares two objects and displays the result.
  * 
  * @author nimesh
  * 
