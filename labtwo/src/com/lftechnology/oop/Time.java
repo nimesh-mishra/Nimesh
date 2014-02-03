@@ -51,7 +51,7 @@ public class Time {
 	 * 
 	 * @author nimesh
 	 */
-	public void display() {
+	private void display() {
 		System.out.println("The current time is \t" + hours + ":" + minutes
 				+ ":" + seconds);
 	}
@@ -64,7 +64,7 @@ public class Time {
 	 * @param time
 	 *            {@link Time} The time to be added to current time.
 	 */
-	public void addTime(Time time) {
+	private void addTime(Time time) {
 		int addhour = 0;
 		int addmin = 0;
 		int addsec = 0;

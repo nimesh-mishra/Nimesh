@@ -25,10 +25,11 @@ public class NumberGuessingGame {
 	private int randomNumber;
 	private int count = 0;
 	private int number = 0;
-
+	Scanner scan;
 	public NumberGuessingGame() {
 		Random random = new Random();
-		randomNumber = (int) random.nextInt(100) + 1;
+		randomNumber =random.nextInt(100) + 1;
+		scan=new Scanner(System.in);
 	}
 
 	/**
@@ -38,7 +39,7 @@ public class NumberGuessingGame {
 	 * @author nimesh
 	 */
 	private void prompt() {
-		Scanner scan = new Scanner(System.in);
+		
 		System.out
 		.println("==============================================================");
 		System.out

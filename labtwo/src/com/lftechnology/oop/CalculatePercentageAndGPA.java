@@ -12,13 +12,12 @@ import java.util.Scanner;
 
 /**
  * This class calculates the percentage and GPA of a student.
- * 
  * @author nimesh
  * 
  */
 public class CalculatePercentageAndGPA {
 
-	final int totalSubjects = 5;
+	final private int totalSubjects = 5;
 	private String[] name = new String[5];
 	private int[] classno = new int[5];
 	private int[] roll = new int[5];
@@ -46,7 +45,7 @@ public class CalculatePercentageAndGPA {
 	 *            {@link Integer} The number of the student. Used to identify
 	 *            any student among five
 	 */
-	public void setData(String name, int classno, int roll, float science,
+	private void setData(String name, int classno, int roll, float science,
 			float math, float social, float nepali, float health, int number) {
 
 		this.name[number] = name;
@@ -107,10 +106,9 @@ public class CalculatePercentageAndGPA {
 
 	/**
 	 * This function calculates the percentage of each student
-	 * 
 	 * @author nimesh
 	 */
-	public void calculatePercentage() {
+	private void calculatePercentage() {
 		float total = 0;
 		for (int number = 0; number < 5; number++) {
 			total = science[number] + math[number] + social[number]
@@ -123,8 +121,9 @@ public class CalculatePercentageAndGPA {
 
 	/**
 	 * This function displays the percentage of each student.
+	 * @author nimesh
 	 */
-	public void display() {
+	private void display() {
 		for (int i = 0; i < 5; i++) {
 			System.out.println("The percentage of \t" + name[i] + "is: \t"
 					+ percentage[i]);
