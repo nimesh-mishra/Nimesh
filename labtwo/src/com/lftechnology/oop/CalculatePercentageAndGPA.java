@@ -1,6 +1,8 @@
 package com.lftechnology.oop;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 /**
  * 3. Write a program that calculates percentage and GPA of 5 students. 
@@ -56,6 +58,52 @@ public class CalculatePercentageAndGPA {
 		this.nepali[number] = nepali;
 		this.health[number] = health;
 	}
+	
+	/**
+	 * This method prompts user for input
+	 * @author nimesh
+	 */
+	private void prompt(){
+		String name="";
+		int classNumber=0;
+		int roll=0;
+		float science=0;
+		float math=0;
+		float social=0;
+		float nepali=0;
+		float health=0;
+		for (int i = 0; i < 5; i++) {
+			Scanner scan = new Scanner(System.in);
+			try{
+			System.out.println("Enter the name of student " + (i+1) + ": \t");
+			name = scan.nextLine();
+			System.out.println("Enter the class of student " + (i+1) + ": \t");
+			classNumber = scan.nextInt();
+			System.out.println("Enter the roll number of studnet " + (i+1) + 1
+					+ ": \t");
+			roll = scan.nextInt();
+			System.out.println("Enter the marks in science: \t");
+			science = scan.nextFloat();
+			System.out.println("Enter the marks in math: \t");
+			math = scan.nextFloat();
+			System.out.println("Enter the marks in social: \t");
+			social = scan.nextFloat();
+			System.out.println("Enter the marks in nepali: \t");
+			nepali = scan.nextFloat();
+			System.out.println("Enter the marks in health: \t");
+			health = scan.nextFloat();
+			
+			}catch(InputMismatchException e){
+				e.printStackTrace();
+				System.out.println("Please Enter valid data");
+				prompt();
+				
+			}
+			setData(name, classNumber, roll, science, math, social,
+					nepali, health, i);
+
+		}
+	}
 
 	/**
 	 * This function calculates the percentage of each student
@@ -85,37 +133,6 @@ public class CalculatePercentageAndGPA {
 
 	public static void main(String[] args) {
 		CalculatePercentageAndGPA calculate = new CalculatePercentageAndGPA();
-		String name;
-		int classNumber;
-		int roll;
-		float science;
-		float math;
-		float social;
-		float nepali;
-		float health;
-		for (int i = 0; i < 5; i++) {
-			Scanner scan = new Scanner(System.in);
-			System.out.println("Enter the name of student " + i + 1 + ": \t");
-			name = scan.nextLine();
-			System.out.println("Enter the class of student " + i + 1 + ": \t");
-			classNumber = scan.nextInt();
-			System.out.println("Enter the roll number of studnet " + i + 1
-					+ ": \t");
-			roll = scan.nextInt();
-			System.out.println("Enter the marks in science: \t");
-			science = scan.nextFloat();
-			System.out.println("Enter the marks in math: \t");
-			math = scan.nextFloat();
-			System.out.println("Enter the marks in social: \t");
-			social = scan.nextFloat();
-			System.out.println("Enter the marks in nepali: \t");
-			nepali = scan.nextFloat();
-			System.out.println("Enter the marks in health: \t");
-			health = scan.nextFloat();
-			calculate.setData(name, classNumber, roll, science, math, social,
-					nepali, health, i);
-
-		}
 		calculate.calculatePercentage();
 
 	}
