@@ -41,8 +41,8 @@ public class Distance {
 	 * @author nimesh
 	 */
 	private void display() {
-		System.out.println("The distance in feet is: \t" + feet);
-		System.out.println("The distance in inches is: \t" + inches);
+		System.out.println("The distance in feet is: \t" + this.feet);
+		System.out.println("The distance in inches is: \t" + this.inches);
 	}
 
 	/**
@@ -51,15 +51,15 @@ public class Distance {
 	 * @author nimesh
 	 * @return {@link Float} The sum of both distances
 	 */
-	private void addDistances(Distance d) {
-		float tempfeet = feet + d.feet;
-		float tempinch = inches + d.inches;
-		if (tempinch > 12) {
-			tempfeet += tempinch / 12;
-			tempinch = tempinch % 12;
+	private void addDistances(Distance distance) {
+		float tempFeet = this.feet + distance.feet;
+		float tempInch = this.inches + distance.inches;
+		if (tempInch >= 12) {
+			tempFeet += tempInch / 12;
+			tempInch = tempInch % 12;
 		}
-		System.out.println("The Total length is: \t" +(int)tempfeet + "feet \t"
-				+ tempinch + "inches");
+		System.out.println("The Total length is: \t" +(int)tempFeet + "feet \t"
+				+ tempInch + "inches");
 	}
 
 	/**
@@ -68,16 +68,16 @@ public class Distance {
 	 * @author nimesh
 	 * @param {@link Distance} The distance object to be compared
 	 */
-	private void compareDistances(Distance d) {
+	private void compareDistances(Distance distance) {
 		
-		float totalInchesOne=feet*12+inches;
-		float totalInchesTwo=d.feet*12+d.inches;
+		float totalInchesOne=this.feet*12+this.inches;
+		float totalInchesTwo=distance.feet*12+distance.inches;
 		float difference=Math.abs(totalInchesOne-totalInchesTwo);
-		float tempfeet = difference/12;
-		float tempinch = difference%12;
+		float tempFeet = difference/12;
+		float tempInch = difference%12;
 		
-		System.out.println("The Total length is: \t" + (int)tempfeet + "feet \t"
-				+ tempinch + "inches");
+		System.out.println("The Total length is: \t" + (int)tempFeet + "feet \t"
+				+ tempInch + "inches");
 	}
 
 	public static void main(String[] args) {
