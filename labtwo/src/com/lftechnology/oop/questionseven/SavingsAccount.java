@@ -42,14 +42,13 @@ public class SavingsAccount {
 
 	/**
 	 * This static method is used to set the annualInterestRate
-	 * 
+	 * The interest is divided by 100 to change it to real value.
 	 * @author nimesh
 	 * @param interestRate
 	 *            {@link Float} The annual Intrest rate.
 	 */
 	public static void modifyInterestRate(float interestRate) {
-		annualIntrestRate = interestRate / 100; // to change the % to actual
-		// value..
+		annualIntrestRate = interestRate / 100; 
 	}
 
 	/**

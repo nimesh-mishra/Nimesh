@@ -1,5 +1,10 @@
 package com.lftechnology.oop.questionsix;
 
+/**
+ * This class is used to test {@link Date} class
+ * @author nimesh
+ *
+ */
 public class DateTest {
 
 	public static void main(String[] args) {
