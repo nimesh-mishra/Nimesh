@@ -16,7 +16,6 @@ public class PalindromeCheck {
 	 *         Asks the user for input
 	 */
 	private void prompt() {
-		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Please enter the five digit number: Or 0 to Exit");
 		num = scan.nextInt();
