@@ -24,14 +24,24 @@ public class QuestionOne {
 		String fileName="/home/nimesh/abc.txt";
 		File file=new File(fileName);
 		
+		//To check if file already exist
+		 if(file.exists()){
+			 System.out.println("The file already exists...");
+			 System.exit(0);
+		 }
 		try {
 			if(file.createNewFile()){
 				System.out.println("File  "+file.getName()+" Created Successfully...");
 			}
+			else{
+				System.err.println("Sorry! File creation Failed");
+				System.exit(0);
+				}
 		} catch (IOException e) {
 			System.err.println("Error occurred... \n The error is :");
 			e.printStackTrace();
 		}
+		//To check the file after its creation
 		if(file.exists()){
 			if(file.isDirectory()){
 				System.out.println("The entity is a directory");
@@ -44,8 +54,7 @@ public class QuestionOne {
 					
 		}
 		else{
-		System.out.println("The file doesn't exist");
-		System.out.println("Creating file...");
+		System.err.println("Sorry! file doesn't exist..");
 		}
 		
 

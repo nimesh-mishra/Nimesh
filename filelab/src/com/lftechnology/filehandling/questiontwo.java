@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
  * This class uses the basic functions defined in {@link File} class such as rename,delete.
  * The user at first needs to enter the absolute file name.
- * The class splits the string to get the path.
+ * The class splits the file name to get the path.
  * The class then appends the new name(just name not absolute name) to the path..
  * The class then renames the file using a new {@link File} object.
  * Finally the file is deleted.

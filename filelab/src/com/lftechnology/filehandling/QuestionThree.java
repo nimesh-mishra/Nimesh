@@ -34,6 +34,9 @@ public class QuestionThree {
 				if(file.exists()){
 					System.out.println("Directory Created Successfully");
 				}
+				
+			}
+			else{
 				System.err.println("Directory Creation Failed!");
 			}
 		}
