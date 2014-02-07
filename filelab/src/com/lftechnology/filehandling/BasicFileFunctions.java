@@ -69,6 +69,9 @@ public class BasicFileFunctions {
 					System.out.println("File deleted successfully...(Y)");
 				}
 			}
+			else{
+				System.err.println("File Renaming Failed !!");
+			}
 		} else {
 			System.err
 					.println("Sorry! The file you are searching for doesn't exist");
