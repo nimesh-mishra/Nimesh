@@ -46,9 +46,7 @@ public class PalindromeCheck {
 				int remainder = number % 10;
 				temp = temp * 10 + remainder;
 				number = number / 10;
-
 			}
-
 		}
 		if (i == temp) {
 			return true;
