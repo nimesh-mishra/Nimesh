@@ -42,24 +42,30 @@ public class FileInput {
 					fileValues[i] = scan.nextLine().toString();
 					i++;
 				}
+				String valueOne=fileValues[0];
+				String valueTwo=fileValues[1];
+				String valueThree=fileValues[2];
 				LOG.info("The integer read is: "
-						+ Integer.valueOf(fileValues[0]));
+						+ Integer.valueOf(valueOne));
 				LOG.info("he floating point number read is :"
-						+ Float.valueOf(fileValues[1]));
-				LOG.info("The String read is :" + fileValues[2]);
+						+ Float.valueOf(valueTwo));
+				LOG.info("The String read is :" + valueThree);
 				LOG.info("Hi "
-						+ fileValues[2]
+						+ valueThree
 								+ "!, the sum of "
-								+ Integer.valueOf(fileValues[0])
+								+ Integer.valueOf(valueOne)
 								+ "and "
-								+ Float.valueOf(fileValues[1])
+								+ Float.valueOf(valueTwo)
 								+ " is "
-								+ (Integer.valueOf(fileValues[0]) + Float
-										.valueOf(fileValues[1])));
+								+ (Integer.valueOf(valueOne) + Float
+										.valueOf(valueTwo)));
 			} catch (FileNotFoundException e) {
 				LOG.log(Level.SEVERE, "Exception occured. The Exception is : "
 						+ e.getMessage());
 			}
+		}
+		else{
+			LOG.log(Level.SEVERE,"Sorry!! File not found...");
 		}
 	}
 

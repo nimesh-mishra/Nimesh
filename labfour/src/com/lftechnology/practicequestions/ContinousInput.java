@@ -25,13 +25,13 @@ public class ContinousInput {
 	public static void main(String[] args) {
 		LOG.info("Into Main method");
 		Scanner scan = new Scanner(System.in);
-		String toEnd = "quit";
+		final String TOEND = "quit";
 		String input = "";
 		boolean quit = false;
 		while (!quit) {
 			LOG.info("Enter the string");
 			input = scan.next();
-			if (input.equalsIgnoreCase(toEnd)) {
+			if (input.equalsIgnoreCase(TOEND)) {
 				quit = true;
 			}
 		}

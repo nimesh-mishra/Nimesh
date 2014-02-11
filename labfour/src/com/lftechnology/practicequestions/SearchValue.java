@@ -8,7 +8,8 @@ import java.util.logging.Logger;
  * 1. Search for a specific value in an array.
  */
 /**
- * This class finds the specific value in array.
+ * This class finds the specific value in array. 
+ * It does this by comparing the value with every element in the array.
  * 
  * @author nimesh
  */
@@ -39,7 +40,7 @@ public class SearchValue {
 				break;
 			}
 		}
-		if (found == false) {
+		if (!found) {
 			LOG.info("Value not found");
 		}
 
