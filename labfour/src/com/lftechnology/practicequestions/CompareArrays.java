@@ -1,4 +1,7 @@
 package com.lftechnology.practicequestions;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 import java.util.logging.Logger;
 
 /**
@@ -19,19 +22,26 @@ public class CompareArrays {
 	 */
 	public static void main(String[] args) {
 		LOG.info("Into Main method");
-		int[] arrayOne = new int[100];
+		/*int[] arrayOne = new int[100];
 		int[] arrayTwo = new int[100];
-		int flag = 0;
+		Random rand=new Random();
 		for (int i = 0; i < arrayOne.length; i++) {
-			arrayOne[i] = (i + 1);
+			arrayOne[i] = rand.nextInt(100);
 		}
 		for (int i = 0; i < arrayTwo.length; i++) {
-			arrayTwo[i] = (i + 1);
-		}
-		for (int i = 0; i < arrayOne.length; i++) {
-			for (int j = 0; j < arrayTwo.length; j++) {
-				if (arrayOne[i] == arrayTwo[j]) {
-					flag++;
+			arrayTwo[i] =rand.nextInt(100);
+		}*/
+		int[]arrayOne={2,2,2,2,2,2};
+		int[]arrayTwo={1,2,3,4,5,6};
+		int flag = 0;
+		List<Integer>indexToSkip=new LinkedList<Integer>();
+		if(arrayOne.length==arrayTwo.length){
+			for (int i = 0; i < arrayOne.length; i++) {
+				for (int j = 0; j < arrayTwo.length; j++) {
+					if (arrayOne[i] == arrayTwo[j] && (!indexToSkip.contains(j))) {
+						flag++;
+						indexToSkip.add(j);
+					}
 				}
 			}
 		}
