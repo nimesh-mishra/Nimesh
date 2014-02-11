@@ -1,6 +1,8 @@
 package com.lftechnology.labcollectionsquestions;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -36,7 +38,7 @@ public class HashSetAndListImplementation {
 				listOfWords));
 		List<String> duplicateWords = new ArrayList<String>();
 		for (String str : listOfWords) {
-			if (distinctList.contains(str) && !duplicateWords.contains(str)) {
+			if ((Collections.frequency(listOfWords, str)>1)&& (!duplicateWords.contains(str))){
 				duplicateWords.add(str);
 			}
 		}
