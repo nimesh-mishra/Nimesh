@@ -35,11 +35,11 @@ public class SortingSubList {
 		LOG.info("The list is : " + listOfInteger);
 		Collections.shuffle(listOfInteger);
 		LOG.info("The shuffled list is : " + listOfInteger);
-		List<Integer> subList = listOfInteger.subList(0, 5);
-		LOG.info("The sub list is : " + subList);
-		Collections.sort(subList);
-		LOG.info("The sorted sub list is : " + subList);
-
+		List<Integer> subListOfNumbers = new ArrayList<Integer>(listOfInteger.subList(0,6));
+		LOG.info("The sub list is : " + subListOfNumbers);
+		Collections.sort(subListOfNumbers);
+		LOG.info("The sorted sub list is : " + subListOfNumbers);	
+		
 	}
 
 }

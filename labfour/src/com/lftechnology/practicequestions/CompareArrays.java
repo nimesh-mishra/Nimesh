@@ -31,8 +31,8 @@ public class CompareArrays {
 		for (int i = 0; i < arrayTwo.length; i++) {
 			arrayTwo[i] =rand.nextInt(100);
 		}*/
-		int[]arrayOne={2,2,2,2,2,2};
-		int[]arrayTwo={1,2,3,4,5,6};
+		int[]arrayOne={2, 6, 6, 6, 2, 2};
+		int[]arrayTwo={ 2, 2, 2, 6, 2, 6 };
 		int flag = 0;
 		List<Integer>indexToSkip=new LinkedList<Integer>();
 		if(arrayOne.length==arrayTwo.length){
@@ -41,6 +41,7 @@ public class CompareArrays {
 					if (arrayOne[i] == arrayTwo[j] && (!indexToSkip.contains(j))) {
 						flag++;
 						indexToSkip.add(j);
+						break;
 					}
 				}
 			}

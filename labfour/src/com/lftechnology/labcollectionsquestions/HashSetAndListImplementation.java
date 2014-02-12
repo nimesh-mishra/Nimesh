@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 /**
  * 1. Takes the words in its argument list and prints out any duplicate words,
@@ -36,9 +37,9 @@ public class HashSetAndListImplementation {
 		Iterator iterator;
 		List<String> distinctList = new ArrayList<String>(new HashSet<String>(
 				listOfWords));
-		List<String> duplicateWords = new ArrayList<String>();
+		Set<String> duplicateWords = new HashSet<String>();
 		for (String str : listOfWords) {
-			if ((Collections.frequency(listOfWords, str)>1)&& (!duplicateWords.contains(str))){
+			if ((Collections.frequency(listOfWords, str)>1)){
 				duplicateWords.add(str);
 			}
 		}

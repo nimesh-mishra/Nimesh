@@ -35,7 +35,6 @@ public class DuplicateAndDistinctList {
 		for (String str : setOfWord) {
 			listOfAllWords.add(str);
 		}
-		Map<String, Integer> wordsCount = new HashMap<String, Integer>();
 		for (String word : listOfAllWords) {
 			if (Collections.frequency(listOfAllWords, word) == 1) {
 				singleWords.add(word);
