@@ -22,15 +22,6 @@ public class CompareArrays {
 	 */
 	public static void main(String[] args) {
 		LOG.info("Into Main method");
-		/*int[] arrayOne = new int[100];
-		int[] arrayTwo = new int[100];
-		Random rand=new Random();
-		for (int i = 0; i < arrayOne.length; i++) {
-			arrayOne[i] = rand.nextInt(100);
-		}
-		for (int i = 0; i < arrayTwo.length; i++) {
-			arrayTwo[i] =rand.nextInt(100);
-		}*/
 		int[]arrayOne={2, 6, 6, 6, 2, 2};
 		int[]arrayTwo={ 2, 2, 2, 6, 2, 6 };
 		int flag = 0;
