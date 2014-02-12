@@ -26,8 +26,8 @@ public class Palindrome {
 	            for(int j = i;j <=999;j++)
 	            {
 	                int value1 = i * j;
-	                StringBuilder sb1 = new StringBuilder(""+value1);
-	                String sb2 = ""+value1;
+	                StringBuilder sb1 = new StringBuilder(String.valueOf(value1));
+	                String sb2 = String.valueOf(value1);
 	                sb1.reverse();
 	                if(sb2.equals(sb1.toString()) && value<value1) {
 	                    value = value1;
