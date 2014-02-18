@@ -31,7 +31,7 @@ public class DatabaseConnection {
 			Class.forName("com.mysql.jdbc.Driver");
 			LOG.info("Creating Database Connection");
 			con = DriverManager
-					.getConnection("jdbc:mysql://localhost/LfDatabaseTraining?"
+					.getConnection("jdbc:mysql://localhost/lfdb?"
 							+ "user=root&password=nimesh");
 		} catch (ClassNotFoundException | SQLException s) {
 			LOG.log(Level.SEVERE,

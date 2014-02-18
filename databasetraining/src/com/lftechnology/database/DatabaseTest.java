@@ -1,9 +1,11 @@
 package com.lftechnology.database;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -184,6 +186,31 @@ public class DatabaseTest extends DatabaseConnection {
 			LOG.info("Sorry ! The result is null");
 		}
 	}
+	/**
+	 * This method gets first name and last name from lfdb database, employees table...
+	 * the database used is different from other above methods.
+	 * The method uses a sql function to retrive those two values.
+	 * @param id {@link Integer} The id of the employee
+	 * @return {@link Arrays} {@link String} An array of string containing first and last name.
+	 */
+	private  String[] getNames(int id){
+		String[] names=new String[2];
+		LOG.info("Into method getNames");
+		LOG.log(Level.FINE, "The id for query is : " + id);
+		try {
+			CallableStatement call = con.prepareCall("{?=call getEmployees(?)}");
+			call.registerOutParameter(1, java.sql.Types.VARCHAR);
+			call.setInt(2,id );
+			call.execute();
+			String firstLastNames=call.getString(1);
+			LOG.info("The name is : "+firstLastNames);
+			names=firstLastNames.split(",");
+		} catch (SQLException e) {
+			LOG.log(Level.SEVERE, "Exception occurred @ getNames");
+			LOG.log(Level.SEVERE, "The message is " + e.getMessage());
+		}
+		return names;
+	}
 
 	/**
 	 * This is main class
@@ -197,7 +224,9 @@ public class DatabaseTest extends DatabaseConnection {
 		Scanner scan = new Scanner(System.in);
 		String choice;
 		boolean end = false;
-		while (!end) {
+		String []names=dbtest.getNames(3);
+		LOG.info("The first name is : "+names[0]+" and the last name is : "+names[1]);
+		/*while (!end) {
 			LOG.info("Enter e to operate on table employees,s on salary , x to exit");
 			choice = scan.next();
 			if (choice.equalsIgnoreCase("e")) {
@@ -224,7 +253,7 @@ public class DatabaseTest extends DatabaseConnection {
 			} else if (choice.equalsIgnoreCase("x")) {
 				end = true;
 			}
-		}
+		}*/
 	}
 
 }
