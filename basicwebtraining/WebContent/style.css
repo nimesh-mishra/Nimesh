@@ -1,37 +1,68 @@
-#container{
-	width: 1000px;
+#startlink {
+	text-decoration: none;
+	color: #bcd5e5;
+	position: absolute;
+	bottom: 10%;
+	left: 30%;
 }
-#header{
-	background-color: #000000;
+
+#simple {
+	height: 100%;
+	width: 100%;
 }
-#break{
-	background-color: #BDBDBD;
-	height:2px;
-	border: 40px;
+
+#starth1 {
+	font-size: 50px;
+	font-family: sans-serif;
 }
-h1{
-    margin-bottom: 0; color: #F2F2F2;
+
+#formdiv {
+	position: absolute;
+	top: 40%;
+	left: 30%;
 }
-#menu{
-	background-color: #000000; 
-	width: 200px; 
-	height: 200px;
+
+#welcome {
+	color: #bcd5e5;
+	size: 30px;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+
+#displaydiv {
+	position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+body {
+	background-color: #060a7f;
+	background-image: url("/basicwebtraining/res/robot.jpg");
+	height: auto;
+	width: 100%;
+}
+
+input {
+	background: none;
+	border: 1px dotted #bcd5e5;
+	display: inline-block;
 	float: left;
+	color: #bcd5e5;
 }
-#menubox{
-	height: 38px; 
-	width: 196px;
-/* 	float: left; */
+
+label {
+	display: inline-block;
+	float: left;
+	clear: left;
+	text-align: right;
+	color: #bcd5e5;
+	size: 20px;
+	width: 100px;
 }
-h2{
-	margin-bottom: 1; 
-	color: #F2F2F2;
-	text-align:center;
-	 text-decoration:underline; 
-	 margin-top: 0; 
-	 height: 50px
-}
-#items{
-	height: 162px; 
-	margin-bottom: 1;
+
+p {
+	color: #bcd5e5;
+	font-size: 30px;
+    font-family: sans-serif;
 }
