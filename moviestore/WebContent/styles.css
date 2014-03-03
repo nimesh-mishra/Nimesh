@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+body{
+	background-image: url("img/music.jpg");
+}
+a{
+	text-decoration: none;
+	color: #f9878e;
+}
+h1{
+	margin-top: 50px;
+	
+}
+h2{
+	font-size: 20px;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    color:#f9878e;
+    font-size:25px;
+}
+input {
+  display: inline-block;
+  float: left;
+  size: 60px;
+  background-color: #f9878e;
+}
+legend{
+	color:#f9878e;
+	font-size: 20px;
+}
+#wrapper{
+	margin-left: 20%;
+	margin-right: 20%;
+}
+#titlebar{
+	position: fixed;
+	width:100%;
+	height:auto;
+}
+#homebutton{
+	float: left;
+}
+#other-buttons{
+	margin-top: 30px;
+	background-color: white;
+}
+#box-office{
+	float:left;
+	position: absolute;
+	width:25%;
+	height:auto;
+}
+#next-release{
+	margin-left:20px;
+	float:left;
+    position:relative;
+    left:15%;
+    height:auto;
+}
+#movie-rating{
+	margin-left:20px;
+	float:left;
+    position:relative;
+    left:17%;
+    height:auto;
+}
+#login{
+	margin-left:20px;
+    float:left;
+    position:relative;
+    left:19%;
+    height:auto;
+}
+#signup{
+	margin-top: 20%;
+}
+#login-form-fieldset{
+	border-style:solid;
+	border-color:  #f86670;
+}
