@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: center;
+}
+input {
+	padding-left:20px;
+  display: inline-block;
+  float: left;
+}
+body{
+	background-color: olive;
+}
+#typeradio{
+	position:absolute;
+	left:20%;
+	display:inline-block;
+	text-align: justify;
+}
