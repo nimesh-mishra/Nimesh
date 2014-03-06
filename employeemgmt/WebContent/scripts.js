@@ -1,16 +1,16 @@
 function validateForm(){
-  var fields = ["firstName", "lastName", "compname", "mail", "compphone", "adres", "zip"]
+  var fields = ["firstName", "lastName", "gender", "age", "country", "zone", "district","vdcMnc","dept"]
 
   var i, l = fields.length;
   var fieldname;
   for (i = 0; i < l; i++) {
     fieldname = fields[i];
-    if (document.forms["addEmployee"][fieldname].value === "") {
-      alert(fieldname + " can not be empty");
+    if (!document.forms["addEmployee"][fieldname].value.match(/^[A-Za-z]/)) {
+      alert(fieldname + " Cant be other than alphabets.");
       return false;
     }
-    else if(document.forms["addEmployee"]["age"].value<=18){
-    	alert("age can't be less than 18");
+    else if(document.forms["addEmployee"]["age"].value.match(/^[0-9]/)){
+    	alert("age can't be alphabetic");
     	return false;
     }
   }
