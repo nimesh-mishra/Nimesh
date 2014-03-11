@@ -1,0 +1,300 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image: url("happy-workers.jpg");
+/* 	 background-color:#9aee30; */
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+h2 {
+	color: #89f7d0;
+	text-align: left:
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	font-size: 22px;
+	font-family: sans-serif;
+}
+
+p {
+	text-align: center;
+}
+label {
+    size: 20px;
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+input {
+    clear: left;
+    display: inline-block;
+    margin-bottom: 5px;
+    /* float: left; */
+}
+
+table {
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+th {
+    width: 8%;
+    color: #e5f57d;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+td {
+    width: 8%;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+legend {
+    color: #faf195;
+}
+
+strong {
+    font-family: sans-serif;
+}
+#wrapper {
+	position: absolute;
+	left: 15%;
+	background-color: #1b3e5e;
+	height: auto;
+	width: 70%;
+}
+
+#index-wrapper {
+	position: absolute;
+	left: 15%;
+	height: auto;
+	width: 70%;
+}
+#search-box{
+   position:relative;
+   margin-top:5%;
+/*    left:15%; */
+   height:auto;
+   width:70%; 
+   float:left;
+}
+#options-bar {
+	position: relative;
+	height: 5%;
+}
+
+#view-option {
+	float: left;
+	position: relative;
+	width: 49%;
+	height: auto;
+	background-color: #1a2154;
+}
+
+#view-option:hover {
+	border: 2px solid #1a2154;
+	color: #1a2154;
+}
+#add-option {
+	margin-right: 1%;
+    float: left;
+    position: relative;
+    width: 49%;
+    height: auto;
+    background-color: #1a2154;
+}
+
+#add-option:hover {
+    border: 2px solid #1a2154;
+    color: #1a2154;
+}
+
+#search-option {
+	
+	float: left;
+	position: relative;
+	width: 49%;
+	height: auto;
+	background-color: #1a2154;
+}
+
+#search-option:hover {
+	border: 2px solid #1a2154;
+	color: #1a2154;
+}
+#index-h1{
+	text-align: center;
+	color:blue;
+}
+#index-option {
+	position: absolute;
+	left:30%;
+	top:300px;
+	width: 100%;
+	height: auto;
+}
+#index-view-option {
+	position: relative;
+	width: 49%;
+	height: 20%;
+/* 	background-color: white; */
+	
+}
+
+#index-view-option:HOVER {
+	border: 1px solid blue;
+	color: blue;
+	background-color:white;
+}
+
+#index-add-option {
+	position: relative;
+	width: 49%;
+	height: 20%;
+/* 	background-color: white; */
+}
+ 
+#index-add-option:HOVER {
+	border: 1px solid blue;
+	color: blue;
+	background-color:white;
+}
+
+#index-search-option {
+	position: relative;
+	width: 49%;
+	height: 20%;
+/* 	background-color: white; */
+}
+#index-search-option:HOVER {
+	border: 1px solid blue;
+	color: blue;
+	background-color:white;
+}
+
+.viewButton:HOVER {
+	border: 1px solid #1a2154;
+	color: #1a2154;
+}
+
+#add-employee-header {
+	margin-top: 10%;
+	float: none;
+	position: relative;
+	top: 5%;
+}
+
+#view-employee-header {
+	margin-top: 10%;
+	float: none;
+	position: relative;
+	top: 5%;
+}
+#search-table{
+	position:fixed;
+	top:33%;
+	height:auto;
+	width:auto;
+	background-color: blue;
+}
+/* #search-box{ */
+/* 	position: relative: */
+/* 	float:none; */
+/* 	margin-top: 2%; */
+/* 	background-color: blue; */
+/* } */
+
+/* #typeradio {
+	position: absolute;
+	left: 20%;
+	display: inline-block;
+	color: white;
+} */
+
+/* select {
+	display: inline-block;
+	float: left;
+	clear: left;
+	color: #7cadd9;
+} */
+
+/* table { */
+/* 	overflow:auto; */
+/* /* 	border-spacing: 2px; */
+*
+/
+/* 	border-collapse: separate; */
+/* /* 	border: 5px solid green; */
+
+ 
+
+*
+/
+/* 	background-color: #7cadd9; */
+/* 	align: center; */
+/* 	position:relative */
+/* 	table-layout: fixed; */
+/* /* 	width: 100%; */
+
+ 
+
+*
+/
+/* /* 	height: 100%; */
+
+ 
+
+*
+/
+/* } */
+
+/* td { */
+/* /* 	border: 1px solid black; */
+
+ 
+
+*
+/
+/* 	display: block; */
+/* /* 		padding:5px; */
+
+ 
+
+*
+/
+/* 	color: white; */
+/* /* 	width: 100%; */
+
+ 
+
+*
+/
+/* } */
+/* thead,tbody { */
+/* 	display: block; */
+/* 	width: 10%; */
+/* } */
+/* #view-table { */
+/* 	align: center; */
+/* 	height: auto; */
+/* 	overflow: auto; */
+/* } */
