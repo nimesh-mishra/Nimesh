@@ -104,6 +104,7 @@ function deleteRecord(id){
 	my_form.submit();
 }
 function editRecord(id){
+	alert("clicked edit button.The id is "+id);
 	my_form=document.createElement('FORM');
 	my_form.name='editForm';
 	my_form.method='POST';

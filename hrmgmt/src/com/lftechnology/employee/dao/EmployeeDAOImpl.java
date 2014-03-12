@@ -260,7 +260,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			prepared.setInt(1,id );			
 			prepared.executeUpdate();
 			addressId = getAddressId(id);
-			preparedTwo=con.prepareStatement("Delete from ERP.Employee where id=? ");
+			preparedTwo=con.prepareStatement("Delete from ERP.Address where id=? ");
 			preparedTwo.setInt(1, addressId);
 			preparedTwo.executeUpdate();
 			int empAddressId=getEmpAddressId(id);
@@ -270,7 +270,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			deptId=getEmpDeptId(id);
 			preparedFour=con.prepareStatement("Delete from ERP.Emp_Dept where id =?");
 			preparedFour.setInt(1, deptId);
-			preparedFour.executeQuery();
+			preparedFour.executeUpdate();
 			con.commit();
 			
 

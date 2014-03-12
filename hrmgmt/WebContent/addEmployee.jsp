@@ -44,7 +44,9 @@
 					</legend>
 					
 					<%Employee employee=(Employee)request.getAttribute("editDetails");%>
-					<%if(employee==null){ %>
+					<%if(employee==null){
+						  System.out.println("Adding employee for the first time...");
+						%>
 					
 					<label> First Name</label> <input name='firstName' type='text'
 						value='Enter First Name here' onclick='clearThis(this)'
@@ -77,24 +79,33 @@
 						value='Enter VDC/MNC here' onclick='clearThis(this)'
 						onfocus='clearThis(this)'><br>
 				</fieldset>
-				<%}else%><% { %>
-				<%request.setAttribute("actionType", "update"); %>
-				<%request.setAttribute("empId", request.getAttribute("empId")); %>
+				<%}else {
+					System.out.println("Updating record...");
+					request.removeAttribute("pageType");
+					request.setAttribute("actionType", "update");
+					request.setAttribute("pageType", "update");
+					
+					request.setAttribute("empId", request.getAttribute("empId")); 
+					
+				%>
+				<script type="text/javascript">alert("the pageType is "+<%=request.getAttribute("pageType")%>);</script>
+				<input type="hidden" name="update" value="update">
+				<input type="hidden" name="actionType" value="update">
 				<label> First Name</label> <input name='firstName' type='text'
                         value=<%=employee.getFirstName() %> onclick='clearThis(this)'
                         onfocus='clearThis(this)'><br> <label> Middle
                         Name</label> <input name='middleName' type='text'
-                        value=<%=employee.getMiddleName() %> onclick='clearThis(this)'
+                        value=<%=employee.getMiddleName().length() > 0 ? employee.getMiddleName() : "" %> onclick='clearThis(this)'
                         onfocus='clearThis(this)'><br> <label> Last
                         Name</label> <input name='lastName' type='text'
                         value=<%=employee.getLastName() %> onclick='clearThis(this)'
                         onfocus='clearThis(this)'><br> <label id="gender">Choose
                         Gender</label> 
-                        <%if(employee.getGender().equalsIgnoreCase("m")){ %>
+                        <%if(employee.getGender().equalsIgnoreCase("male")){ %>
                         <input id='typeradio' type='radio' name='gender'
-                        value='male' checked>Male <input id='typeradio'
+                        value='male' checked="checked">Male <input id='typeradio'
                         type='radio' name='gender' value='female'>Female<br>
-                        <%}else { %>
+                        <%}else if(employee.getGender().equalsIgnoreCase("female")) { %>
                         <input id='typeradio' type='radio' name='gender'
                         value='male'>Male <input id='typeradio'
                         type='radio' name='gender' value='female' checked="checked">Female<br>
@@ -134,9 +145,9 @@
                     </select>
                 </fieldset>
 				<button type="submit" name="submitButton" value="submit"
-					onclick="return validateForm()">Submit</button>
-				<button type="submit" name="submitButton" value="submitAndAdd"
-					onclick="return validateForm()">Submit And Add</button>
+					onclick="return validateForm();">Submit</button>
+<!-- 				<button type="submit" name="submitButton" value="submitAndAdd" -->
+<!-- 					onclick="return validateForm()">Submit And Add</button> -->
 			</form>
 		</div>
 	</div>

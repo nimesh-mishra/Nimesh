@@ -64,7 +64,7 @@ public class EmployeeActionUtil {
 		LOG.info("Into method getEmployeeDetail");
 		List<Employee> employeeList=new ArrayList<Employee>();
 		try {
-			if(!(resultSet==null)){
+			if((resultSet!=null)){
 				while(resultSet.next()){
 					Employee employee=new Employee();
 					employee.setId(resultSet.getInt(EmployeeConstants.ID));

@@ -74,7 +74,7 @@
 				%>
 				<tbody>
 					<%
-						request.setAttribute("page", "search");
+						request.setAttribute("pageType", "search");
 					%>
 					<%
 						for (Employee employee : employeeList) {
